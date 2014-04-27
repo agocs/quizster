@@ -73,9 +73,9 @@
 			    	For now you are Bob Jones.
 			    <br />
 			    	<ul>
-			    		<li>Questions</li>
+			    		<a href="/question/1"><li>Questions</li></a>
 			    		<li>Topics</li>
-			    		<li>Users</li>
+			    		<a href="/account/1"><li>Users</li></a>
 			    	</ul>
 
 			    </p>
