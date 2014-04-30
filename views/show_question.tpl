@@ -79,13 +79,11 @@
 			    <span class="topic">{{.topic}}</span>
 			    <p class="description">
 			    	{{.question}}
-			    <ul>
-			    	<li>{{.answer1}}</li>
-			    	<li>{{.answer2}}</li>
-			    	<li>{{.answer3}}</li>
-			    	<li>{{.answer4}}</li>
-			    </ul>
+			  
 			    </p>
+			    <pre>
+			    	{{.answerChoices}}
+			    </pre>
 			  </div>
 			</div>
 			</div>

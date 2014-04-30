@@ -18,14 +18,18 @@ func (this *QuestionController) Get() {
 		}
 		q := models.FindQuestion(qid)
 		t := models.FindTopic(q.TopicId)
+		ac := models.FindAnswersForQuestion(qid)
 
 		this.Data["topic"] = t.Name
 		this.Data["question"] = q.QuestionText
-		this.Data["answer1"] = q.RightAnswer
-		this.Data["answer2"] = q.WrongAnswer1
-		this.Data["answer3"] = q.WrongAnswer2
-		this.Data["answer4"] = q.WrongAnswer3
+
+		answerchoices := ""
+		for _, answerchoice := range ac {
+			answerchoices = answerchoices + answerchoice.Text + "\n"
+		}
+		this.Data["answerChoices"] = answerchoices
 		this.TplNames = "show_question.tpl"
+
 	} else {
 		//show me all the questions
 	}
